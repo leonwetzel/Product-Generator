@@ -1,0 +1,11 @@
+c:\users\leon\documents\visual studio 2015\Projects\Product Generator\Product Generator\bin\Debug\Product Generator.exe.config
+c:\users\leon\documents\visual studio 2015\Projects\Product Generator\Product Generator\bin\Debug\Product Generator.exe
+c:\users\leon\documents\visual studio 2015\Projects\Product Generator\Product Generator\bin\Debug\Product Generator.pdb
+c:\users\leon\documents\visual studio 2015\Projects\Product Generator\Product Generator\bin\Debug\MongoDB.Bson.dll
+c:\users\leon\documents\visual studio 2015\Projects\Product Generator\Product Generator\bin\Debug\MongoDB.Driver.Core.dll
+c:\users\leon\documents\visual studio 2015\Projects\Product Generator\Product Generator\bin\Debug\MongoDB.Driver.dll
+c:\users\leon\documents\visual studio 2015\Projects\Product Generator\Product Generator\bin\Debug\MongoDB.Bson.xml
+c:\users\leon\documents\visual studio 2015\Projects\Product Generator\Product Generator\bin\Debug\MongoDB.Driver.xml
+c:\users\leon\documents\visual studio 2015\Projects\Product Generator\Product Generator\obj\Debug\Product Generator.csprojResolveAssemblyReference.cache
+c:\users\leon\documents\visual studio 2015\Projects\Product Generator\Product Generator\obj\Debug\Product Generator.exe
+c:\users\leon\documents\visual studio 2015\Projects\Product Generator\Product Generator\obj\Debug\Product Generator.pdb
