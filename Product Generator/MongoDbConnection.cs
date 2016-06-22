@@ -33,7 +33,7 @@ namespace Product_Generator
             {
                 System.Threading.Thread.Sleep(5);
                 Collection.InsertOneAsync(Creator.GetDocument(i));
-                Console.WriteLine("Creating: " + i);
+                Console.WriteLine("Creating: " + (i+100000));
             }
         }
     }
