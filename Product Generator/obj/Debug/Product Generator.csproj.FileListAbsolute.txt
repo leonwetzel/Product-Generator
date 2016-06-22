@@ -9,3 +9,6 @@ c:\users\leon\documents\visual studio 2015\Projects\Product Generator\Product Ge
 c:\users\leon\documents\visual studio 2015\Projects\Product Generator\Product Generator\obj\Debug\Product Generator.csprojResolveAssemblyReference.cache
 c:\users\leon\documents\visual studio 2015\Projects\Product Generator\Product Generator\obj\Debug\Product Generator.exe
 c:\users\leon\documents\visual studio 2015\Projects\Product Generator\Product Generator\obj\Debug\Product Generator.pdb
+C:\Users\daant\Source\Repos\Product-Generator\Product Generator\bin\Debug\Product Generator.exe.config
+C:\Users\daant\Source\Repos\Product-Generator\Product Generator\obj\Debug\Product Generator.exe
+C:\Users\daant\Source\Repos\Product-Generator\Product Generator\obj\Debug\Product Generator.pdb

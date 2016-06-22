@@ -6,6 +6,11 @@ namespace Product_Generator
     public class DocumentCreator
     {
         private readonly Random _random = new Random();
+        private string nameFirst;
+        private string nameSecond;
+        private string nameThird;
+        private string nameFourth;
+        private string nameFifth;
 
         /// <summary>
         /// Returns the document that corresponds to the given product ID.
@@ -19,9 +24,39 @@ namespace Product_Generator
                 {"product_id", productId },
                 {"name", GetName()},
                 {"description", GetDescription()},
+                {"age", getAge()},
                 {"attributes", GetAttributeDocument()},
-                {"supplier_id", _random.Next(10) + 1}
+                {"supplier_id", _random.Next(10) + 1},
+                {"tags", getTags()}
             };
+            return document;
+        }
+        public int getAge()
+        {
+            int randomNumber = _random.Next(5);
+            switch(randomNumber)
+            {
+                case 0 :
+                    return 3;
+                case 1 :
+                    return 7;
+                case 2:
+                    return 12;
+                case 3:
+                    return 16;
+                case 4:
+                    return 18;
+            }
+            return 0;
+        }
+
+        public BsonDocument getTags()
+        {
+            var document = new BsonDocument();
+            document.Add("brand", nameFirst);
+            document.Add("set themes", nameSecond);
+            document.Add("collection", nameThird);
+            document.Add("part", nameFifth);
             return document;
         }
 
@@ -70,8 +105,13 @@ namespace Product_Generator
             "Part 18","Part 19","Part 20","Part 21","Part 22","Part 23","Part 24","Part 25","Part 26","Part 27",
             "Part 28","Part 29","Part 30","Part 31","Part 32","Part 33","Part 34","Part 35","Part 36","Part 37"};
 
-            return firstPart[_random.Next(firstPart.Length)] + " " + secondPart[_random.Next(secondPart.Length)] + " " +
-                thirdPart[_random.Next(thirdPart.Length)] + " " + fourthPart[_random.Next(fourthPart.Length)] + " " + fifthPart[_random.Next(fifthPart.Length)];
+            nameFirst = firstPart[_random.Next(firstPart.Length)];
+            nameSecond = secondPart[_random.Next(secondPart.Length)];
+            nameThird = thirdPart[_random.Next(thirdPart.Length)];
+            nameFourth = fourthPart[_random.Next(fourthPart.Length)];
+            nameFifth = fifthPart[_random.Next(fifthPart.Length)];
+            return nameFirst + " " + nameSecond + " " +
+                nameThird + " " + nameFourth + " " + nameFifth;
         }
 
         /// <summary>

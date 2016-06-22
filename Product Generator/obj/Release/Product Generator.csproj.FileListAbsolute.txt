@@ -1,0 +1,11 @@
+C:\Users\daant\Source\Repos\Product-Generator\Product Generator\bin\Release\Product Generator.exe.config
+C:\Users\daant\Source\Repos\Product-Generator\Product Generator\bin\Release\Product Generator.exe
+C:\Users\daant\Source\Repos\Product-Generator\Product Generator\bin\Release\Product Generator.pdb
+C:\Users\daant\Source\Repos\Product-Generator\Product Generator\bin\Release\MongoDB.Bson.dll
+C:\Users\daant\Source\Repos\Product-Generator\Product Generator\bin\Release\MongoDB.Driver.Core.dll
+C:\Users\daant\Source\Repos\Product-Generator\Product Generator\bin\Release\MongoDB.Driver.dll
+C:\Users\daant\Source\Repos\Product-Generator\Product Generator\bin\Release\MongoDB.Bson.xml
+C:\Users\daant\Source\Repos\Product-Generator\Product Generator\bin\Release\MongoDB.Driver.xml
+C:\Users\daant\Source\Repos\Product-Generator\Product Generator\obj\Release\Product Generator.csprojResolveAssemblyReference.cache
+C:\Users\daant\Source\Repos\Product-Generator\Product Generator\obj\Release\Product Generator.exe
+C:\Users\daant\Source\Repos\Product-Generator\Product Generator\obj\Release\Product Generator.pdb
