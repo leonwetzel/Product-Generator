@@ -20,7 +20,7 @@ namespace Product_Generator
             Database = Client.GetDatabase("wamasys");
             Collection = Database.GetCollection<BsonDocument>("products");
             Creator = new DocumentCreator();
-            CreatingLoop(20000);
+            CreatingLoop(100000);
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace Product_Generator
             for (var i = 1; i <= amount; i++)
             {
                 System.Threading.Thread.Sleep(5);
-                Collection.InsertOneAsync(Creator.GetDocument(i));
+                Collection.InsertOneAsync(Creator.GetDocument(i+amount));
                 Console.WriteLine("Creating: " + (i+100000));
             }
         }

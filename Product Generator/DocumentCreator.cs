@@ -33,12 +33,12 @@ namespace Product_Generator
         }
         public int getAge()
         {
-            int randomNumber = _random.Next(5);
-            switch(randomNumber)
+            var randomNumber = _random.Next(5);
+            switch (randomNumber)
             {
-                case 0 :
+                case 0:
                     return 3;
-                case 1 :
+                case 1:
                     return 7;
                 case 2:
                     return 12;

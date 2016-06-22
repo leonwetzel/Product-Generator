@@ -12,3 +12,14 @@ c:\users\leon\documents\visual studio 2015\Projects\Product Generator\Product Ge
 C:\Users\daant\Source\Repos\Product-Generator\Product Generator\bin\Debug\Product Generator.exe.config
 C:\Users\daant\Source\Repos\Product-Generator\Product Generator\obj\Debug\Product Generator.exe
 C:\Users\daant\Source\Repos\Product-Generator\Product Generator\obj\Debug\Product Generator.pdb
+C:\Users\Leon\Source\Repos\Product-Generator2\Product Generator\bin\Debug\Product Generator.exe.config
+C:\Users\Leon\Source\Repos\Product-Generator2\Product Generator\obj\Debug\Product Generator.exe
+C:\Users\Leon\Source\Repos\Product-Generator2\Product Generator\obj\Debug\Product Generator.pdb
+C:\Users\Leon\Source\Repos\Product-Generator2\Product Generator\bin\Debug\Product Generator.exe
+C:\Users\Leon\Source\Repos\Product-Generator2\Product Generator\bin\Debug\Product Generator.pdb
+C:\Users\Leon\Source\Repos\Product-Generator2\Product Generator\bin\Debug\MongoDB.Bson.dll
+C:\Users\Leon\Source\Repos\Product-Generator2\Product Generator\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\Leon\Source\Repos\Product-Generator2\Product Generator\bin\Debug\MongoDB.Driver.dll
+C:\Users\Leon\Source\Repos\Product-Generator2\Product Generator\bin\Debug\MongoDB.Bson.xml
+C:\Users\Leon\Source\Repos\Product-Generator2\Product Generator\bin\Debug\MongoDB.Driver.xml
+C:\Users\Leon\Source\Repos\Product-Generator2\Product Generator\obj\Debug\Product Generator.csprojResolveAssemblyReference.cache
