@@ -9,7 +9,8 @@ namespace Product_Generator
         protected static IMongoClient Client;
         protected static IMongoDatabase Database;
         protected static IMongoCollection<BsonDocument> Collection;
-        protected DocumentCreator Creator;
+        protected DocumentBuilder Builder;
+        private const int AmountOfProducts = 100000;
 
         /// <summary>
         /// Creates a connection to the database.
@@ -19,21 +20,21 @@ namespace Product_Generator
             Client = new MongoClient();
             Database = Client.GetDatabase("wamasys");
             Collection = Database.GetCollection<BsonDocument>("products");
-            Creator = new DocumentCreator();
-            CreatingLoop(100000);
+            Builder = new DocumentBuilder();
+            CreateProducts(AmountOfProducts);
         }
 
         /// <summary>
-        /// Creates the given amount of products.
+        /// Creates a given amount of products.
         /// </summary>
         /// <param name="amount">The amount of products that should be created.</param>
-        public void CreatingLoop(int amount)
+        public void CreateProducts(int amount)
         {
             for (var i = 1; i <= amount; i++)
             {
                 System.Threading.Thread.Sleep(5);
-                Collection.InsertOneAsync(Creator.GetDocument(i+amount));
-                Console.WriteLine("Creating: " + (i+100000));
+                Collection.InsertOneAsync(Builder.GetDocument(i+amount));
+                Console.WriteLine("Creating: " + (i+ AmountOfProducts));
             }
         }
     }

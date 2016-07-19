@@ -3,38 +3,41 @@ using MongoDB.Bson;
 
 namespace Product_Generator
 {
-    public class DocumentCreator
+    public class DocumentBuilder
     {
         private readonly Random _random = new Random();
-        private string nameFirst;
-        private string nameSecond;
-        private string nameThird;
-        private string nameFourth;
-        private string nameFifth;
+        private string _nameFirst;
+        private string _nameSecond;
+        private string _nameThird;
+        private string _nameFourth;
+        private string _nameFifth;
 
         /// <summary>
         /// Returns the document that corresponds to the given product ID.
         /// </summary>
-        /// <param name="productId"></param>
+        /// <param name="productId">The ID of a product.</param>
         /// <returns></returns>
         public BsonDocument GetDocument(int productId)
         {
-            var document = new BsonDocument
+            return new BsonDocument
             {
                 {"product_id", productId },
                 {"name", GetName()},
                 {"description", GetDescription()},
-                {"age", getAge()},
+                {"age", GetAge()},
                 {"attributes", GetAttributeDocument()},
                 {"supplier_id", _random.Next(10) + 1},
-                {"tags", getTags()}
+                {"tags", GetTags()}
             };
-            return document;
         }
-        public int getAge()
+
+        /// <summary>
+        /// Get the minimum age for usage of the product.
+        /// </summary>
+        /// <returns>The minimum age for usage of the product.</returns>
+        public int GetAge()
         {
-            var randomNumber = _random.Next(5);
-            switch (randomNumber)
+            switch (_random.Next(5))
             {
                 case 0:
                     return 3;
@@ -46,18 +49,24 @@ namespace Product_Generator
                     return 16;
                 case 4:
                     return 18;
+                default:
+                    return 16;
             }
-            return 0;
         }
 
-        public BsonDocument getTags()
+        /// <summary>
+        /// Returns the corresponding meta tags for a product.
+        /// </summary>
+        /// <returns></returns>
+        public BsonDocument GetTags()
         {
-            var document = new BsonDocument();
-            document.Add("brand", nameFirst);
-            document.Add("set themes", nameSecond);
-            document.Add("collection", nameThird);
-            document.Add("part", nameFifth);
-            return document;
+            return new BsonDocument
+            {
+                {"brand", _nameFirst},
+                {"set themes", _nameSecond},
+                {"collection", _nameThird},
+                {"part", _nameFifth}
+            };
         }
 
         /// <summary>
@@ -70,6 +79,7 @@ namespace Product_Generator
             {
                 {"Attribute 1", GetAttribute() + " " + _random.Next(10)+1}
             };
+
             for (var i = 0; i < _random.Next(5) + 5; i++)
             {
                 document.Add("Attribute " + i + 2, GetAttribute() + " " + _random.Next(10) + 1);
@@ -97,7 +107,7 @@ namespace Product_Generator
             "Xalax", "F1", "F2", "F3", "Elektro", "Mechanical", "Natural", "All Guns Blazing", "Stomper",
             "Roboforce", "Unitron", "UFO", "Galaxy", "Insects", "Spiders"};
 
-            string[] fourthPart = {"The reboot", "The revamp", "The original", "the reimagining", "", "", "", "", "", "",
+            string[] fourthPart = {"The reboot", "The revamp", "The original", "The reimagining", "", "", "", "", "", "",
             "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
 
             string[] fifthPart = {"Part 1", "Part 2", "Part 3", "Part 4", "Part 5", "Part 6", "Part 7",
@@ -105,13 +115,12 @@ namespace Product_Generator
             "Part 18","Part 19","Part 20","Part 21","Part 22","Part 23","Part 24","Part 25","Part 26","Part 27",
             "Part 28","Part 29","Part 30","Part 31","Part 32","Part 33","Part 34","Part 35","Part 36","Part 37"};
 
-            nameFirst = firstPart[_random.Next(firstPart.Length)];
-            nameSecond = secondPart[_random.Next(secondPart.Length)];
-            nameThird = thirdPart[_random.Next(thirdPart.Length)];
-            nameFourth = fourthPart[_random.Next(fourthPart.Length)];
-            nameFifth = fifthPart[_random.Next(fifthPart.Length)];
-            return nameFirst + " " + nameSecond + " " +
-                nameThird + " " + nameFourth + " " + nameFifth;
+            _nameFirst = firstPart[_random.Next(firstPart.Length)];
+            _nameSecond = secondPart[_random.Next(secondPart.Length)];
+            _nameThird = thirdPart[_random.Next(thirdPart.Length)];
+            _nameFourth = fourthPart[_random.Next(fourthPart.Length)];
+            _nameFifth = fifthPart[_random.Next(fifthPart.Length)];
+            return _nameFirst + " " + _nameSecond + " " + _nameThird + " " + _nameFourth + " " + _nameFifth;
         }
 
         /// <summary>
@@ -129,22 +138,19 @@ namespace Product_Generator
                 int[] blockArray = {1, 2, 3, 4, 6, 8};
                 return colorArray[_random.Next(colorArray.Length)] + " - " + blockArray[_random.Next(blockArray.Length)];
             }
-            else
+
+            // Let's create a person
+            string[] hairArray =
             {
-                // Let's create a person
-                string[] hairArray =
-                {
-                    "afro", "natural", "beehive", "bowl cut", "braid", "bunches", "burr",
-                    "chignon", "chonmage", "conk", "crew cut", "dreadlocks", "finger wave", "flattop", "fontange",
-                    "french braid", "french twist", "frosted tips", "half crown", "highlights", "hime cut",
-                    "ivy league", "jewfro", "longhair", "mohawk", "pageboy", "part out"
-                };
+                "afro", "natural", "beehive", "bowl cut", "braid", "bunches", "burr",
+                "chignon", "chonmage", "conk", "crew cut", "dreadlocks", "finger wave", "flattop", "fontange",
+                "french braid", "french twist", "frosted tips", "half crown", "highlights", "hime cut",
+                "ivy league", "jewfro", "longhair", "mohawk", "pageboy", "part out"
+            };
 
-                string[] faceArray = {"angry", "happy", "salty", "neutral", "sad", "shy"};
+            string[] faceArray = {"angry", "happy", "salty", "neutral", "sad", "shy"};
 
-                return colorArray[_random.Next(colorArray.Length)] + " - " + faceArray[_random.Next(faceArray.Length)] +
-                       " - " + hairArray[_random.Next(hairArray.Length)];
-            }
+            return colorArray[_random.Next(colorArray.Length)] + " - " + faceArray[_random.Next(faceArray.Length)] + " - " + hairArray[_random.Next(hairArray.Length)];
         }
 
         /// <summary>

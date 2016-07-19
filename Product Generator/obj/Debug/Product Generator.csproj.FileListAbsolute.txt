@@ -23,3 +23,6 @@ C:\Users\Leon\Source\Repos\Product-Generator2\Product Generator\bin\Debug\MongoD
 C:\Users\Leon\Source\Repos\Product-Generator2\Product Generator\bin\Debug\MongoDB.Bson.xml
 C:\Users\Leon\Source\Repos\Product-Generator2\Product Generator\bin\Debug\MongoDB.Driver.xml
 C:\Users\Leon\Source\Repos\Product-Generator2\Product Generator\obj\Debug\Product Generator.csprojResolveAssemblyReference.cache
+C:\Users\leonw_000\Documents\GitHub\Product-Generator\Product Generator\bin\Debug\Product Generator.exe.config
+C:\Users\leonw_000\Documents\GitHub\Product-Generator\Product Generator\obj\Debug\Product Generator.exe
+C:\Users\leonw_000\Documents\GitHub\Product-Generator\Product Generator\obj\Debug\Product Generator.pdb

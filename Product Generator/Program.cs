@@ -4,8 +4,7 @@
     {
         public static void Main(string[] args)
         {
-            var connection = new MongoDbConnection();
-            connection.CreateConnection();
+            new MongoDbConnection().CreateConnection();
         }
     }
 }
